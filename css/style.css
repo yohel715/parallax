@@ -1,0 +1,32 @@
+body{
+    background-color: #1E3932;
+    margin: 0;
+}
+
+#parallax {
+    background-image: 
+        url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-3.png), 
+        url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-2.png), 
+        url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+}
+
+.cup {
+    background-image: url("/img/cup.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    left: 50%;
+    opacity: 1;
+    position: absolute;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    z-index: 1;
+}
