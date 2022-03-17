@@ -1,19 +1,38 @@
 body{
     background-color: #1E3932;
+    background-image: url("/img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
     margin: 0;
+    display: grid;
 }
 
-#parallax {
-    background-image: 
-        url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-3.png), 
-        url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-2.png), 
-        url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png);
+#front-parallax,
+#bg-parallax {
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
-    position: relative;
     width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#front-parallax {
+    background-image: 
+        url("/img/leaves-depth-1.png"), 
+        url("/img/leaves-depth-2.png");
+        /* url(https://raw.githubusercontent.com/oscicen/oscicen.github.io/master/img/depth-1.png); */ 
+    position: relative;
     z-index: 2;
+}
+
+#bg-parallax {
+    background-image: 
+        url("/img/cups-depth-1.png"), 
+        url("/img/cups-depth-2.png");
+    position: relative;
+    z-index: 0;
 }
 
 .cup {
@@ -21,12 +40,11 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    height: 500px;
     left: 50%;
-    opacity: 1;
     position: absolute;
-    top: 45%;
+    top: 55%;
     transform: translate(-50%, -50%);
-    width: 300px;
+    width: 500px;
     z-index: 1;
 }
